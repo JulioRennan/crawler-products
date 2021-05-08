@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <box-search />
+    <group-lojas />
+  </main>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import BoxSearch from "./components/BoxSearch";
+import GroupLojas from "./components/GroupLojas";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    BoxSearch,
+    GroupLojas,
+  },
+  mounted(){
+    //colocar metodos que precisam ser chamados em todos os widgets
+     window.api.send("init");
   }
-}
+};
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  display: block;
+  padding: 20px;
+}
+main {
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 780px) {
+  main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .all-container {
+    margin-top: 30px;
+  }
 }
 </style>

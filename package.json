@@ -5,20 +5,48 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
+    "bufferutil": "^4.0.3",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "electron-builder": "^22.10.5",
+    "node-telegram-bot-api": "^0.52.0",
+    "puppeteer-core": "^8.0.0",
+    "puppeteer-in-electron": "^3.0.3",
+    "telegrambot": "^0.1.0",
+    "utf-8-validate": "^5.0.4",
+    "vue": "^2.6.11",
+    "vuetify": "^2.4.0"
   },
   "devDependencies": {
+    "@mdi/font": "^5.9.55",
+    "@mdi/js": "^5.9.55",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
+    "cheerio": "^1.0.0-rc.5",
+    "electron": "^11.4.2",
+    "electron-devtools-installer": "^3.1.0",
+    "electron-packager": "^15.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "nodemon": "^2.0.7",
+    "openurl": "^1.1.1",
+    "puppeteer": "^8.0.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.6",
+    "vue-cli-plugin-vuetify": "~2.3.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,

@@ -1,0 +1,6 @@
+{
+    "pesquisas": ["RTX 3060TI","RTX 3070","RTX 3060","RTX 3080","RX 6800","GTX 1660S","RTX 2060"],
+    "blocked_keys":["computador","notebook","microfone","cadeira"],
+    "path_to_chrome":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "chat_id":"-530845984"
+}
